@@ -2,17 +2,15 @@ package animalExample;
 
 public class Animal {
 	
-	private String breathe;
-	private String eat;
-	private boolean liveOnEarth;
+	//if private, you can only call it in this class, Animal
+	//With protected: its accessible to all classes within the animalExample package
+	protected String breathe;
+	protected String eat;
+	protected boolean liveOnEarth;
 	
 	//no-arg constructor
 	public Animal () {
 		
-	}
-
-	public void setLiveOnEarth(boolean liveOnEarth) {
-		this.liveOnEarth = liveOnEarth;
 	}
 
 	//Constructor with all Arguments
@@ -43,10 +41,27 @@ public class Animal {
 		return liveOnEarth;
 	}
 	
+	public void liveOnEarthConstruct(boolean liveOnEarth) {
+		this.liveOnEarth = liveOnEarth;
+	}
+	
+	
 	//Methods
-	public boolean getBreathe(boolean yesOrNo) {
-		return yesOrNo;
+	public String getBreathe(boolean yesOrNo) {
+		if (yesOrNo == true) {
+			return "Yes, " + "The animal can breathe";
+		} else {
+			return "No, " + "The animal cannot breathe....:C";
+		}
+		
 	} 
+	
+	//Get value of inputs for 3 attributes
+	public String value() {
+		return "Animal breathe " + breathe + "\n"
+				+ "Animal eats" + eat + "\n"
+				+ "Animal live on Earth? True or False: " + liveOnEarth;
+	}
 	
 	
 

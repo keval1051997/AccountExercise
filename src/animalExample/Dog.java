@@ -1,5 +1,6 @@
 package animalExample;
 
+//Inheritance: Dog will now have Animal's Attributes
 public class Dog extends Animal {
 	
 	private String fur;
@@ -47,6 +48,16 @@ public class Dog extends Animal {
 	//Methods
 	public String getFurSoftness(String furtype) {
 		return "Fur Softness: " + furtype;
+	}
+	
+	public String value() {
+		return 
+				"can animal breath:"+ breathe + "\n"
+				+ "What does animals eat:" + eat + "\n"
+				+ "Does they live on this Earth:" + liveOnEarth + "\n"
+				+ "Softness of fur:" + fur + "\n"
+				+ "Bark sound:" + bark+ "\n"
+				+ "Collar Color:" + collarColor;
 	}
 
 }
